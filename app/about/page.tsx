@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="flex flex-col h-full">
       <PageSearchBar />
-      <div className="flex-1 overflow-auto">
+      <div className="flex-1 pt-12 overflow-auto">
         <AboutSection />
       </div>
     </div>
