@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { GoSearch } from "react-icons/go";
 import SearchResults from "@/consts/SearchResults";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { SearchResult } from "@/types/SearchResultsTypes";
 
 const SearchBar = () => {
@@ -11,6 +11,19 @@ const SearchBar = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+  const pathname = usePathname();
+
+  // Update search value based on current route
+  useEffect(() => {
+    const currentResult = SearchResults.find(
+      (result) => result.url === pathname
+    );
+    if (currentResult) {
+      setSearchValue(currentResult.title);
+    } else if (pathname === "/") {
+      setSearchValue("");
+    }
+  }, [pathname]);
 
   // Close on outside click / Esc
   useEffect(() => {
@@ -39,7 +52,6 @@ const SearchBar = () => {
   };
 
   return (
-    // Give the wrapper the width and positioning; dropdown anchors to this.
     <div ref={containerRef} className="relative w-[584px] max-w-[90vw]">
       {/* Input pill */}
       <div
@@ -64,7 +76,7 @@ const SearchBar = () => {
         </div>
       </div>
 
-      {/* Floating dropdown (does NOT affect layout) */}
+      {/* Floating dropdown */}
       <div
         className={`absolute left-0 right-0 top-full z-50 mt-0.5 bg-white border border-gray-200 border-t-0 
         rounded-b-3xl shadow-lg overflow-hidden transition-all duration-150
@@ -79,14 +91,28 @@ const SearchBar = () => {
         <div className="max-h-[420px] overflow-y-auto">
           {SearchResults.map((result) => {
             const ItemIcon = result.icon;
+            const isActive = result.url === pathname;
+
             return (
               <div
                 key={result.id}
                 onClick={() => handleResultClick(result)}
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center transition-colors"
+                className={`px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center transition-colors
+                ${isActive ? "bg-blue-50 border-l-4 border-blue-500" : ""}`}
               >
-                <ItemIcon size={18} className="text-gray-500 mr-3" />
-                <span className="text-gray-900">{result.title}</span>
+                <ItemIcon
+                  size={18}
+                  className={`mr-3 ${
+                    isActive ? "text-blue-600" : "text-gray-500"
+                  }`}
+                />
+                <span
+                  className={`${
+                    isActive ? "text-blue-600 font-medium" : "text-gray-900"
+                  }`}
+                >
+                  {result.title}
+                </span>
               </div>
             );
           })}
