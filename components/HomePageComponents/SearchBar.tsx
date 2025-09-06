@@ -2,16 +2,19 @@
 import React, { useState, useRef, useEffect } from "react";
 import { GoSearch } from "react-icons/go";
 import SearchResults from "@/consts/SearchResults";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { SearchResult } from "@/types/SearchResultsTypes";
 
-const SearchBar = () => {
+interface SearchBarProps {
+  pathname: string;
+}
+
+const SearchBar = ({ pathname }: SearchBarProps) => {
   const [open, setOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  const pathname = usePathname();
 
   // Update search value based on current route
   useEffect(() => {
