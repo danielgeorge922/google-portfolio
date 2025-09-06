@@ -37,7 +37,7 @@ const ImageSection = () => {
       {/* Bottom right image */}
       <div className="relative col-span-2">
         <Image
-          src="/Daniel3.jpg"
+          src="/Daniel3.JPG"
           alt="Daniel George 3"
           width={150}
           height={95}
