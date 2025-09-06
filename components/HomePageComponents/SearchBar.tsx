@@ -83,19 +83,10 @@ const SearchBar = () => {
               <div
                 key={result.id}
                 onClick={() => handleResultClick(result)}
-                className="px-4 py-3 hover:bg-gray-100 cursor-pointer flex items-center transition-colors"
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center transition-colors"
               >
                 <ItemIcon size={18} className="text-gray-500 mr-3" />
-
-                <div className="flex-1">
-                  <div className="flex items-center">
-                    <span className="text-gray-900">{result.title}</span>
-                  </div>
-
-                  <div className="text-sm text-gray-500 mt-1">
-                    {result.description}
-                  </div>
-                </div>
+                <span className="text-gray-900">{result.title}</span>
               </div>
             );
           })}

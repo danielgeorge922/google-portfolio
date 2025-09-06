@@ -20,16 +20,16 @@ const MainButtons = () => {
     <div className="flex gap-4 justify-center mt-8">
       <button
         onClick={handleDownloadResume}
-        className="bg-blue-500 cursor-pointer hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors gap-2 font-medium flex items-center"
+        className="bg-[#f8f9fa] hover:bg-gray-100 border cursor-pointer border-[#f8f9fa] hover:border-[#dadce0] text-[#3c4043] px-6 py-3 rounded transition-all duration-100 font-medium flex items-center hover:shadow-sm"
       >
-        <IoMdDocument className="mr-[12px]" size={18} />
+        <IoMdDocument className="mr-3" size={18} />
         Download Resume
       </button>
       <button
         onClick={handleViewProjects}
-        className="bg-[#34a853] gap-2 cursor-pointer hover:bg-green-600 text-white px-6 py-3 rounded-lg transition-colors font-medium flex items-center"
+        className="bg-[#f8f9fa] hover:bg-gray-100 cursor-pointer border border-[#f8f9fa] hover:border-[#dadce0] text-[#3c4043] px-6 py-3 rounded transition-all duration-100 font-medium flex items-center hover:shadow-sm"
       >
-        <SiMinutemailer className="mr-2" size={18} />
+        <SiMinutemailer className="mr-3" size={18} />
         Email me
       </button>
     </div>

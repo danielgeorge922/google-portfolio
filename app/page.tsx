@@ -1,6 +1,6 @@
 import DanielGoogle from "@/components/DanielGoogle";
-import MainButtons from "@/components/MainButtons";
-import SearchBar from "@/components/SearchBar";
+import MainButtons from "@/components/HomePageComponents/MainButtons";
+import SearchBar from "@/components/HomePageComponents/SearchBar";
 
 export default function Home() {
   return (

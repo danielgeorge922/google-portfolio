@@ -1,22 +1,22 @@
 // /consts/SearchResults.ts
 import { SearchResult } from "@/types/SearchResultsTypes";
-import { FiUser, FiFolder, FiBriefcase, FiFileText, FiMail, FiZap } from "react-icons/fi";
+import {
+  FiUser,
+  FiFolder,
+  FiBriefcase,
+  FiFileText,
+  FiMail,
+  FiZap,
+} from "react-icons/fi";
 
 const SearchResults: SearchResult[] = [
   {
     id: "about",
     title: "About Me",
-    description: "Learn more about Daniel George - my background, skills, and interests",
+    description:
+      "Learn more about Daniel George - my background, skills, and interests",
     url: "/about",
     icon: FiUser,
-    category: "page",
-  },
-  {
-    id: "projects",
-    title: "Projects",
-    description: "View my latest development projects and technical work",
-    url: "/projects",
-    icon: FiFolder,
     category: "page",
   },
   {
@@ -26,6 +26,14 @@ const SearchResults: SearchResult[] = [
     url: "/experience",
     icon: FiBriefcase,
     category: "experience",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+    description: "View my latest development projects and technical work",
+    url: "/projects",
+    icon: FiFolder,
+    category: "page",
   },
   {
     id: "resume",

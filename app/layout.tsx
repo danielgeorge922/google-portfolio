@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import UrlBar from "@/components/UrlBar";
-import TabBar from "@/components/TabBar";
+import UrlBar from "@/components/HomePageComponents/UrlBar";
+import TabBar from "@/components/HomePageComponents/TabBar";
 
 export const metadata: Metadata = {
   title: "Daniel George Portfolio",
@@ -18,9 +18,9 @@ export default function RootLayout({
       <body className={`antialiased`}>
         <main className="h-screen flex flex-col">
           {/* Tab Bar - 5% */}
-          <div className="w-full">
+          {/* <div className="w-full">
             <TabBar />
-          </div>
+          </div> */}
           
           {/* URL Bar - 10% */}
           <div className=" w-full">

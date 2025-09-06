@@ -1,5 +1,5 @@
-const DanielGoogle = () => (
-  <div className="text-[100px] font-normal">
+const DanielGoogle = ({ size = "text-8xl" }: { size?: string }) => (
+  <div className={`${size} font-normal`}>
     <span className="text-[#4285f4]">D</span>
     <span className="text-[#ea4335]">a</span>
     <span className="text-[#fbbc04]">n</span>
@@ -8,4 +8,5 @@ const DanielGoogle = () => (
     <span className="text-[#ea4335]">l</span>
   </div>
 );
+
 export default DanielGoogle;
