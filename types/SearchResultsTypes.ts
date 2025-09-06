@@ -1,8 +1,10 @@
-export type SearchResult = {
+import type { IconType } from "react-icons";
+
+export interface SearchResult {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   url: string;
-  icon?: string; 
-  category?: 'page' | 'project' | 'experience' | 'contact';
-};
+  icon: IconType;
+  category: string;
+}
