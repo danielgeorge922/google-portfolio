@@ -32,7 +32,7 @@ const PageSearchBar = () => {
           <PfpWithModal size="w-8 h-8" />
         </div>
       </div>
-      
+
       {/* Tabs */}
       <SearchTabs pathname={pathname} />
     </div>
