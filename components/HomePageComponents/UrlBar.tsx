@@ -5,7 +5,6 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import { GrPowerReset } from "react-icons/gr";
 import { useRouter, usePathname } from "next/navigation";
-import ProfileModal from "./ProfileModal"; // Import your modal component
 import { downloadResume } from "@/utils/base-utils";
 
 const UrlBar = () => {
