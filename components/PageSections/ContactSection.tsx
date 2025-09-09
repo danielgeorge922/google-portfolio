@@ -26,7 +26,7 @@ const ContactSection = () => {
             </div>
             <div className="flex items-center gap-3">
               <FaPhone className="w-5 h-5 text-[var(--uf-blue)]" />
-              <span className="text-gray-700">(XXX) XXX-XXXX</span>
+              <span className="text-gray-700">(954) 383-9037</span>
             </div>
           </div>
         </div>

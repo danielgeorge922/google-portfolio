@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import UrlBar from "@/components/HomePageComponents/UrlBar";
-import TabBar from "@/components/HomePageComponents/TabBar";
+// import TabBar from "@/components/HomePageComponents/TabBar";
 
 export const metadata: Metadata = {
-  title: "Daniel George Portfolio",
+  title: "Portfolio",
   description: "Welcome to my portfolio website showcasing my work and projects.",
 };
 

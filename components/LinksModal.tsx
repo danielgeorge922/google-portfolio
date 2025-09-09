@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import { useRouter } from "next/navigation";
+import LinksModalConsts from "@/consts/LinksModalConsts";
 
 const LinksModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,60 +28,7 @@ const LinksModal = () => {
     };
   }, [isOpen]);
 
-  const apps = [
-    {
-      name: "About Me",
-      icon: "👨‍💻",
-      url: "/about",
-      description: "Learn about my background",
-    },
-    {
-      name: "Projects",
-      icon: "💻",
-      url: "/projects",
-      description: "View my development work",
-    },
-    {
-      name: "Experience",
-      icon: "💼",
-      url: "/experience",
-      description: "My professional journey",
-    },
-    {
-      name: "Resume",
-      icon: "📄",
-      url: "/resume",
-      description: "Download my resume",
-    },
-    {
-      name: "Contact",
-      icon: "📧",
-      url: "/contact",
-      description: "Get in touch with me",
-    },
-    {
-      name: "GitHub",
-      icon: "🐙",
-      url: "https://github.com/danielgeorge922",
-      description: "View my code repositories",
-      external: true,
-    },
-    {
-      name: "LinkedIn",
-      icon: "💼",
-      url: "https://linkedin.com/in/danielgeorge922",
-      description: "Professional network",
-      external: true,
-    },
-    {
-      name: "Skills",
-      icon: "⚡",
-      url: "/skills",
-      description: "Technologies I work with",
-    },
-  ];
-
-  const handleAppClick = (app: (typeof apps)[0]) => {
+  const handleAppClick = (app: (typeof LinksModalConsts)[0]) => {
     if (app.external) {
       window.open(app.url, "_blank");
     } else {
@@ -94,7 +42,7 @@ const LinksModal = () => {
       {/* Grid Icon Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+        className="p-2 rounded-full hover:bg-gray-100 cursor-pointer transition-colors"
         title="Daniel's Apps"
       >
         <BsFillGrid3X3GapFill size={20} className="text-gray-600" />
@@ -109,7 +57,7 @@ const LinksModal = () => {
           {/* Apps Grid */}
           <div className="p-4">
             <div className="grid grid-cols-3 gap-3">
-              {apps.map((app) => (
+              {LinksModalConsts.map((app) => (
                 <button
                   key={app.name}
                   onClick={() => handleAppClick(app)}
@@ -117,7 +65,7 @@ const LinksModal = () => {
                   title={app.description}
                 >
                   <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
-                    {app.icon}
+                    <app.icon size={24} />
                   </div>
                   <span className="text-xs text-gray-700 text-center font-medium">
                     {app.name}

@@ -45,7 +45,7 @@ const PfpWithModal = ({ size = "w-8 h-8" }: { size?: string }) => {
       {isOpen && (
         <div
           ref={modalRef}
-          className="absolute top-full right-0 mt-2 bg-gray-100 rounded-2xl shadow-2xl w-80 z-50"
+          className="absolute top-full right-0 mt-2 bg-green-100 rounded-2xl shadow-2xl w-80 z-50"
         >
           {/* Header */}
           <div className="px-6 py-4 text-center border-b border-gray-600">
@@ -72,7 +72,7 @@ const PfpWithModal = ({ size = "w-8 h-8" }: { size?: string }) => {
           </div>
 
           <div className="px-6 py-3 text-xs text-gray-700 text-center border-t border-gray-600">
-            <span className="mr-4 hover:text-white cursor-pointer">
+            <span className="mr-4 cursor-pointer">
               Email
             </span>
             <span className=" cursor-pointer">

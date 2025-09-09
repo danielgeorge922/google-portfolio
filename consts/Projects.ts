@@ -40,7 +40,7 @@ export const Projects = [
     link: "https://github.com/danielgeorge922/google-drive",
   },
   {
-    name: "Portfolio Website",
+    name: "Portfolio Website (you're here)",
     description:
       "Personal portfolio website showcasing projects, skills, and professional experience with modern design.",
     image: "/projects/portfolio.png",
