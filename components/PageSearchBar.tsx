@@ -13,8 +13,9 @@ const PageSearchBar = () => {
 
   return (
     <div className="border-b border-gray-200">
+
       {/* Header */}
-      <div className="flex w-full justify-between items-center pt-4 px-12 pb-4">
+      <div className="flex w-full justify-between items-center pt-4 px-12 lg:px-8 xl:px-12 pb-4">
         {/* left */}
         <div className="flex items-center gap-8">
           <Link
@@ -31,6 +32,8 @@ const PageSearchBar = () => {
           <LinksModal />
           <PfpWithModal size="w-8 h-8" />
         </div>
+
+        
       </div>
 
       {/* Tabs */}

@@ -12,8 +12,7 @@ const images = [
 
 const AboutSection = () => {
   return (
-    <div className="flex bg-blue-10 gap-4 flex-col px-4 max-w-7xl mx-auto">
-      {/* top section with my name and overview button */}
+    <div className="flex bg-blue-10 gap-4 flex-col px-8 max-w-[1500px] mx-auto">
       <div className="flex justify-start items-center gap-4">
         <div className="flex flex-col">
           <h1 className="text-2xl">Daniel Martin George</h1>
@@ -63,7 +62,7 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="w-full border-b mt-8 border-black"></div>
+      <div className="w-full border-b mt-8 border-black"></div>      
     </div>
   );
 };

@@ -45,7 +45,7 @@ const PfpWithModal = ({ size = "w-8 h-8" }: { size?: string }) => {
       {isOpen && (
         <div
           ref={modalRef}
-          className="absolute top-full right-0 mt-2 bg-green-100 rounded-2xl shadow-2xl w-80 z-50"
+          className="absolute top-full right-0 mt-2 bg-[#ADD8E6] rounded-2xl shadow-2xl w-80 z-50"
         >
           {/* Header */}
           <div className="px-6 py-4 text-center border-b border-gray-600">

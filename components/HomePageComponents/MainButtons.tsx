@@ -1,19 +1,16 @@
 "use client";
 import React from "react";
-import { useRouter } from "next/navigation";
 import { downloadResume } from "@/utils/base-utils";
 import { IoMdDocument } from "react-icons/io";
 import { SiMinutemailer } from "react-icons/si";
 
 const MainButtons = () => {
-  const router = useRouter();
-
   const handleDownloadResume = () => {
     downloadResume();
   };
 
-  const handleViewProjects = () => {
-    router.push("/projects");
+  const handleEmailMe = () => {
+    window.location.href = "mailto:danielgeorge922@gmail.com";
   };
 
   return (
@@ -26,7 +23,7 @@ const MainButtons = () => {
         Download Resume
       </button>
       <button
-        onClick={handleViewProjects}
+        onClick={handleEmailMe}
         className="bg-[#f8f9fa] hover:bg-gray-100 cursor-pointer border border-[#f8f9fa] hover:border-[#dadce0] text-[#3c4043] px-6 py-3 rounded transition-all duration-100 font-medium flex items-center hover:shadow-sm"
       >
         <SiMinutemailer className="mr-3" size={18} />
