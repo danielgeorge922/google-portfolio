@@ -6,3 +6,4 @@ export interface Experience {
   images?: string[];
   logo: string;
 }
+

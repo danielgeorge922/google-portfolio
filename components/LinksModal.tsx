@@ -64,10 +64,10 @@ const LinksModal = () => {
                   className="flex flex-col items-center p-3 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors group"
                   title={app.description}
                 >
-                  <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
+                  <div className="text-2xl mb-2 ">
                     <app.icon size={24} />
                   </div>
-                  <span className="text-xs text-gray-700 text-center font-medium">
+                  <span className="text-xs text-gray-500 text-center font-medium">
                     {app.name}
                   </span>
                 </button>
