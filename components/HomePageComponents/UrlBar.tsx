@@ -1,11 +1,10 @@
 "use client";
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import { GrPowerReset } from "react-icons/gr";
 import { useRouter, usePathname } from "next/navigation";
-import { downloadResume } from "@/utils/base-utils";
+import PfpWithModal from "../PfpWithModal";
 
 const UrlBar = () => {
   const router = useRouter();
@@ -32,10 +31,6 @@ const UrlBar = () => {
 
   const handleRefresh = () => {
     router.refresh();
-  };
-
-  const handleDownloadResume = () => {
-    downloadResume();
   };
 
   const handleProfileClick = () => {
@@ -82,18 +77,7 @@ const UrlBar = () => {
           {/* RIGHT SIDE STUFF */}
           <div className="flex gap-4 items-center">
             <div className="flex items-center justify-center">
-              <button
-                onClick={handleProfileClick}
-                className="hover:bg-gray-200 p-1 rounded-full"
-              >
-                <Image
-                  src="/Daniel.png"
-                  alt="profile picture"
-                  width={24}
-                  height={24}
-                  className="rounded-full"
-                />
-              </button>
+              <PfpWithModal size="w-6 h-6" onClick={handleProfileClick} />
             </div>
             <div className="flex items-center justify-center">
               <BiDotsVerticalRounded size={24} />

@@ -1,5 +1,4 @@
 import PageSearchBar from "@/components/PageSearchBar";
-import AboutSection from "@/components/PageSections/AboutSection";
 import ExperienceSection from "@/components/PageSections/ExperienceSection";
 import React from "react";
 

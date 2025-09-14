@@ -62,7 +62,33 @@ const AboutSection = () => {
         </div>
       </div>
 
-      <div className="w-full border-b mt-8 border-black"></div>      
+      <div className="w-full border-b mt-4 border-black"></div>
+
+      <div className="flex mb-8">
+        <div className="flex flex-1 p-4 border-r border-[#acafac]">
+          <h1 className="text-[20px] text-gray-800">Top Experiences</h1>
+          <div className="grid grid-cols-2 gap-4 mt-4"></div>
+        </div>
+
+        <div className="w-[37%] p-4">
+          <h1 className="text-[20px]">Overview</h1>
+          <p className="my-4 text-gray-600">
+            I&apos;m a software engineer with experience in full-stack
+            development. Currently, I&apos;m pursuing a B.S. in Computer Science
+            at the University of Florida.
+          </p>
+
+          <h2 className="text-gray-800">
+            <strong>Expected Graduation:</strong> May 2026
+          </h2>
+          <h2 className="text-gray-800 mt-2">
+            <strong>Location:</strong> Gainesville, FL
+          </h2>
+          <h2 className="text-gray-800 mt-2">
+            <strong>Email:</strong> danielgeorge922@gmail.com
+          </h2>
+        </div>
+      </div>
     </div>
   );
 };
