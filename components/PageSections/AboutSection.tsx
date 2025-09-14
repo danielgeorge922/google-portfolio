@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useRouter } from "next/navigation";
 import ImageSection from "../ImageSection";
 import Experiences from "@/consts/Experiences";
 import UniversityCard from "./AboutSection/UniversityCard";
@@ -8,6 +10,8 @@ import BabyExperienceCard from "../BabyExperienceCard";
 import { FiChevronRight } from "react-icons/fi";
 
 const AboutSection = () => {
+  const router = useRouter();
+
   return (
     <div className="flex gap-4 flex-col px-8 max-w-[1500px] mx-auto">
       <div className="flex justify-start items-center gap-4">
@@ -44,7 +48,10 @@ const AboutSection = () => {
 
             <div className="flex items-center mt-4">
               <div className="flex-1 border-b border-black"></div>
-              <button className="bg-gray-200 p-4 cursor-pointer rounded-2xl flex items-center gap-2">
+              <button
+                onClick={() => router.push("/experience")}
+                className="bg-gray-200 p-4 cursor-pointer rounded-2xl flex items-center gap-2"
+              >
                 <h1>See All Experiences</h1>
                 <FiChevronRight size={20} />
               </button>

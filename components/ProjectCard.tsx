@@ -26,7 +26,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   };
 
   return (
-    <div className="bg-white rounded-lg hover:shadow-md transition-shadow duration-200">
+    <div className="bg-gray-100 rounded-lg hover:shadow-md transition-shadow duration-200 flex flex-col">
       <div
         className="aspect-video relative overflow-hidden rounded-t-lg cursor-pointer"
         onClick={handleImageClick}
