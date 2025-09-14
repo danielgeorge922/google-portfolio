@@ -13,7 +13,7 @@ const ExperienceCard = () => {
   return (
     <Link
       href="/experience"
-      className="bg-[#fef1ef] flex-1 rounded-2xl p-4 w-80 hover:scale-105 hover:p-6 transition-all duration-300 cursor-pointer"
+      className="bg-[#fef1ef] flex-1 rounded-2xl p-4 w-full lg:w-80 hover:scale-105 hover:p-6 transition-all duration-300 cursor-pointer"
     >
       <div className="flex flex-col gap-4">
         <p className="text-[#a3574b]">Check out some of my work experience!</p>
