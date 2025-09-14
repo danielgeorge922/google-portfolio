@@ -9,6 +9,7 @@ import Overview from "./AboutSection/Overview";
 import BabyExperienceCard from "../BabyExperienceCard";
 import { FiChevronRight } from "react-icons/fi";
 import FaqSection from "../FaqSection";
+import Links from "../Links";
 
 const AboutSection = () => {
   const router = useRouter();
@@ -63,8 +64,12 @@ const AboutSection = () => {
               </button>
               <div className="flex-1 border-b border-gray-500 hidden sm:block"></div>
             </div>
+            
+            <div className="mt-4">
+              <Links />
+            </div>
 
-            <div>
+            <div className="mt-4">
               <FaqSection />
             </div>
 
