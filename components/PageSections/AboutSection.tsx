@@ -69,7 +69,7 @@ const AboutSection = () => {
               <Links />
             </div>
 
-            <div className="mt-4">
+            <div className="mt-8">
               <FaqSection />
             </div>
 
