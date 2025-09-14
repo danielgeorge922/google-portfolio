@@ -2,6 +2,7 @@ import React from "react";
 import ImageSection from "../ImageSection";
 import Link from "next/link";
 import Image from "next/image";
+import Experiences from "@/consts/Experiences";
 
 const images = [
   "/logos/DTE.jpg",
@@ -67,10 +68,18 @@ const AboutSection = () => {
       <div className="flex mb-8">
         <div className="flex flex-1 p-4 border-r border-[#acafac]">
           <h1 className="text-[20px] text-gray-800">Top Experiences</h1>
-          <div className="grid grid-cols-2 gap-4 mt-4"></div>
+          <div className="grid grid-cols-2 gap-4 mt-4">
+            {Experiences.map((exp, index) => (
+              <div key={index} className="bg-gray-100 p-4 rounded-lg">
+                {/* Add your experience content here */}
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="w-[37%] p-4">
+        {/* OVERVIEW (RIGHT) SECTION */}
+        <div className="w-[37%] flex flex-col p-4">
+
           <h1 className="text-[20px]">Overview</h1>
           <p className="my-4 text-gray-600">
             I&apos;m a software engineer with experience in full-stack
@@ -87,6 +96,9 @@ const AboutSection = () => {
           <h2 className="text-gray-800 mt-2">
             <strong>Email:</strong> danielgeorge922@gmail.com
           </h2>
+
+          {/* PROFILES UNDERNEATH OVERVIEW SECTION */}
+          <div className="w-full border-b mt-8 border-black"></div>
         </div>
       </div>
     </div>
