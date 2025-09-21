@@ -5,7 +5,7 @@ import { SiGithub, SiLinkedin, SiGmail, SiInstagram } from "react-icons/si";
 
 const contacts = [
   {
-    name: "Contact",
+    name: "Email",
     icon: SiGmail,
     url: "/contact",
     description: "Get in touch with me",
@@ -48,7 +48,7 @@ const Overview = () => {
       </p>
 
       <h2 className="text-gray-800 text-sm md:text-base">
-        <strong>Expected Graduation:</strong> May 2026
+        <strong>Expected Graduation:</strong> Dec 2026
       </h2>
       <h2 className="text-gray-800 mt-2 text-sm md:text-base">
         <strong>Location:</strong> Gainesville, FL

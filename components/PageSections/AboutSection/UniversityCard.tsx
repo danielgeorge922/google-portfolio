@@ -8,7 +8,7 @@ const UniversityCard = () => {
       <p className="text-sm text-gray-300 border-b border-[var(--uf-orange)] pb-2 mb-2">
         Minor: Public Health
       </p>
-      <p className="text-white">Expected Graduation: May 2026</p>
+      <p className="text-white">Expected Graduation: Dec 2026</p>
     </div>
   );
 };
