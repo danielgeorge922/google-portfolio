@@ -1,68 +1,43 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+import { Experience } from "@/types/Experience";
 
 interface ExperienceCardProps {
-  experience: {
-    company: string;
-    role: string;
-    duration: string;
-    description: string[];
-    logo: string;
-  };
+  experience: Experience;
 }
 
-const ExperienceCard = ({ experience }: ExperienceCardProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleExpandClick = () => {
-    setIsOpen(!isOpen);
-  };
-
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
-    <div
-      className="flex gap-4 bg-white rounded-lg p-8 border border-gray-200 hover:shadow-md transition-shadow duration-200 group cursor-pointer items-start"
-      onClick={handleExpandClick}
-    >
-      <Image
-        src={experience.logo}
-        alt={`${experience.company} logo`}
-        width={48}
-        height={48}
-        className="w-12 h-12 rounded-full object-cover border border-gray-100"
-      />
-
-      <div className="flex-1">
-        <h3 className="text-lg font-semibold text-gray-900 mb-1">
-          {experience.role}
-        </h3>
-        <p className="text-sm font-medium text-[var(--uf-blue)] mb-1">
+    <div className="rounded-2xl p-4 bg-gray-50 flex flex-col items-center justify-center aspect-square min-h-[200px] overflow-hidden">
+      {/* Company Logo - Always visible */}
+      <div className="flex flex-col items-center gap-2 group-hover:mb-4">
+        <Image
+          src={experience.logo}
+          alt={`${experience.company} logo`}
+          width={64}
+          height={64}
+          className="w-16 h-16 rounded-full object-cover transition-all duration-300 group-hover:w-20 group-hover:h-20"
+        />
+        <h3 className="font-semibold text-center text-sm group-hover:text-base transition-all duration-300">
           {experience.company}
-        </p>
-        {isOpen && (
-          <div className="mt-2">
-            <ul className="text-sm flex flex-col text-gray-700 leading-relaxed space-y-1">
-              {experience.description.map((bullet, index) => (
-                <li key={index} className="flex items-center gap-2">
-                  <span className="text-gray-700 mt-1">•</span>
-                  <span>{bullet}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        </h3>
       </div>
 
-      <span className="inline-flex items-center rounded-2xl px-4 py-2 bg-gray-100 self-start shrink-0">
-        {experience.duration}
-      </span>
+      {/* Expanded Content - Only visible on hover */}
+      <div className="duration-300 flex flex-col gap-2 text-center max-w-md">
+        <p className="text-sm font-medium text-[#4b67a3]">{experience.role}</p>
+        <p className="text-xs text-gray-600">{experience.duration}</p>
 
-      {isOpen ? (
-        <IoChevronUp className="w-6 h-6 text-gray-400 group-hover:text-black transition-colors self-start" />
-      ) : (
-        <IoChevronDown className="w-6 h-6 text-gray-400 group-hover:text-black transition-colors self-start" />
-      )}
+        {experience.description && experience.description.length > 0 && (
+          <ul className="text-xs text-gray-700 mt-2 space-y-1 text-left px-4">
+            {experience.description.slice(0, 3).map((item, index) => (
+              <li key={index} className="list-disc">
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 };
