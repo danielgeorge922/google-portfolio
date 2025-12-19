@@ -1,5 +1,5 @@
 export const Projects = [
-    {
+  {
     name: "X-Ray Classification System",
     subheading: "Machine Learning",
     description:
@@ -9,12 +9,32 @@ export const Projects = [
     link: "https://github.com/danielgeorge922/cis4930-intro-to-ml-final-project",
   },
   {
+    name: "Sign Language Translator",
+    subheading: "Machine Learning",
+    description:
+      "Predictive analytics platform that uses machine learning to forecast trends and outcomes across various domains.",
+    image: "/projects/asl.jpg",
+    technologies: [
+      "Python",
+      "TensorFlow",
+      "OpenCV",
+      "Mediapipe",
+    ],
+    link: "https://github.com/danielgeorge922/sign_language_interpreter",
+  },
+  {
     name: "YouPredict",
     subheading: "Machine Learning / Data Engineering",
     description:
       "Predictive analytics platform that uses machine learning to forecast trends and outcomes across various domains.",
     image: "/projects/youpredict.png",
-    technologies: ["Python", "Scikit-learn", "Flask", "Machine Learning", "Data Engineering"],
+    technologies: [
+      "Python",
+      "Scikit-learn",
+      "Flask",
+      "Machine Learning",
+      "Data Engineering",
+    ],
     link: "https://github.com/danielgeorge922/you-predict",
   },
   {

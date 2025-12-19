@@ -12,7 +12,7 @@ const Experiences: Experience[] = [
   },
   {
     company: "Intradiem",
-    role: "Software Engineering Intern",
+    role: "Data Engineering Intern",
     duration: "May 2025 - Aug 2025",
     description: [
       "Built a Java + Spring Boot ingestion service processing 8,000+ daily data points",
