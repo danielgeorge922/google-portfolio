@@ -2,9 +2,18 @@ import { Experience } from "@/types/Experience";
 
 const Experiences: Experience[] = [
   {
+    company: "Meta",
+    role: "Data Engineering Intern",
+    duration: "May 2026 - Aug 2026",
+    description: ["Incoming Summer 2026 Internship"],
+    images: ["/Daniel.png", "/Daniel2.png"],
+    logo: "/logos/Meta.png",
+    status: "incoming",
+  },
+  {
     company: "Intradiem",
     role: "Software Engineering Intern",
-    duration: "Jun 2025 - Aug 2025",
+    duration: "May 2025 - Aug 2025",
     description: [
       "Built a Java + Spring Boot ingestion service processing 8,000+ daily data points",
       "Automated pipelines with AWS SQS + EventBridge",
@@ -12,6 +21,7 @@ const Experiences: Experience[] = [
     ],
     images: ["/Daniel.png", "/Daniel2.png"],
     logo: "/logos/Intradiem.jpg",
+    status: "previous",
   },
   {
     company: "University of Florida College of Medicine",
@@ -24,6 +34,7 @@ const Experiences: Experience[] = [
     ],
     images: [],
     logo: "/logos/UF.svg",
+    status: "current",
   },
   {
     company: "LemasLab, University of Florida",
@@ -37,6 +48,7 @@ const Experiences: Experience[] = [
     ],
     images: [],
     logo: "/logos/UF.svg",
+    status: "previous",
   },
   {
     company: "University of Florida",
@@ -49,6 +61,7 @@ const Experiences: Experience[] = [
     ],
     images: ["/images/cacao-team.jpg", "/images/research-symposium.jpg"],
     logo: "/logos/UF.svg",
+    status: "previous",
   },
   {
     company: "Vetra (tryvetra.ai)",
@@ -61,6 +74,7 @@ const Experiences: Experience[] = [
     ],
     images: [],
     logo: "/logos/Vetra.png",
+    status: "previous",
   },
   {
     company: "Dream Team Engineering",
@@ -68,12 +82,12 @@ const Experiences: Experience[] = [
     duration: "Aug 2025 - Present",
     description: [
       "Lead a 5-engineer team",
-      "Maintain platforms for 230+ members",
-      "Implement Grafana alerting with auto rollbacks",
+      "Develop recruitment platform for 230+ members",
       "Conduct weekly code reviews to lower defects",
     ],
     images: [],
     logo: "/logos/DTE.jpg",
+    status: "previous",
   },
 ];
 

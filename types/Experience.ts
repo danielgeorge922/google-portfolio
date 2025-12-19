@@ -5,5 +5,5 @@ export interface Experience {
   description: string[];
   images?: string[];
   logo: string;
+  status?: "incoming" | "previous" | "current";
 }
-
