@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 interface ProjectCardProps {
   project: {
     name: string;
+    subheading: string;
     description: string;
     image: string;
     technologies: string[];
@@ -41,9 +42,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
       <div className="p-4 cursor-pointer" onClick={handleExpandClick}>
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-gray-900">
-            {project.name}
-          </h3>
+          <div className="">
+            <h3 className="text-lg font-semibold text-gray-900">
+              {project.name}
+            </h3>
+            <p className="text-sm text-gray-600">{project.subheading}</p>
+          </div>
+
           {isExpanded ? (
             <IoChevronUp className="w-4 h-4 text-gray-400" />
           ) : (
