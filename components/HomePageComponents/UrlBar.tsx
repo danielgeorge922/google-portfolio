@@ -39,10 +39,10 @@ const UrlBar = () => {
 
   return (
     <>
-      <div className="flex bg-gray-100 p-4">
-        <div className="px-4 flex justify-between w-full items-center">
-          {/* LEFT SIDE STUFF */}
-          <div className="flex gap-4 items-center">
+      <div className="flex bg-gray-100 p-2 sm:p-4">
+        <div className="px-1 sm:px-4 flex justify-between w-full items-center gap-2 sm:gap-0">
+          {/* LEFT SIDE STUFF - hidden on mobile */}
+          <div className="hidden sm:flex gap-4 items-center">
             <button
               onClick={handleBack}
               className="flex items-center justify-center hover:bg-gray-200 p-1 rounded"
@@ -64,18 +64,18 @@ const UrlBar = () => {
           </div>
 
           {/* MIDDLE URL STUFF */}
-          <div className="flex-1 px-4">
+          <div className="flex-1 px-1 sm:px-4">
             <input
               type="text"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
-              className="w-full bg-white px-4 py-2 rounded-full focus:outline-blue-300"
+              className="w-full bg-white px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base focus:outline-blue-300"
               placeholder="Search Google or type a URL"
             />
           </div>
 
           {/* RIGHT SIDE STUFF */}
-          <div className="flex gap-4 items-center">
+          <div className="flex gap-2 sm:gap-4 items-center">
             <div className="flex items-center justify-center">
               <PfpWithModal size="w-6 h-6" onClick={handleProfileClick} />
             </div>

@@ -31,7 +31,7 @@ const SearchTabs = ({ pathname }: SearchTabsProps) => {
   };
 
   return (
-    <div className="flex px-12">
+    <div className="flex px-4 sm:px-8 lg:px-12 overflow-x-auto">
       {tabs.map((tab) => {
         const isActive = pathname === tab.path;
         const IconComponent = tab.icon;
@@ -40,14 +40,14 @@ const SearchTabs = ({ pathname }: SearchTabsProps) => {
           <button
             key={tab.path}
             onClick={() => handleTabClick(tab.path)}
-            className={`flex items-center cursor-pointer gap-2 px-4 py-3 border-b-2 transition-all duration-200 ${
+            className={`flex items-center cursor-pointer gap-1 sm:gap-2 px-2 sm:px-4 py-3 border-b-2 transition-all duration-200 whitespace-nowrap ${
               isActive
                 ? "border-blue-500 text-blue-600"
                 : "border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300"
             }`}
           >
             <IconComponent size={16} />
-            <span className="text-sm font-medium">{tab.name}</span>
+            <span className="text-xs sm:text-sm font-medium">{tab.name}</span>
           </button>
         );
       })}

@@ -15,12 +15,12 @@ const PageSearchBar = () => {
     <div className="border-b border-gray-200">
 
       {/* Header */}
-      <div className="flex w-full justify-between items-center pt-4 px-12 lg:px-8 xl:px-12 pb-4">
+      <div className="flex w-full justify-between items-center pt-4 px-4 sm:px-8 lg:px-12 pb-4 gap-4">
         {/* left */}
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-4 sm:gap-8 min-w-0">
           <Link
             href="/"
-            className="cursor-pointer hover:opacity-80 transition-opacity"
+            className="cursor-pointer hover:opacity-80 transition-opacity shrink-0 hidden sm:block"
           >
             <DanielGoogle size="text-4xl" />
           </Link>
@@ -28,12 +28,10 @@ const PageSearchBar = () => {
         </div>
 
         {/* right */}
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-2 sm:gap-4 items-center shrink-0">
           <LinksModal />
           <PfpWithModal size="w-8 h-8" />
         </div>
-
-        
       </div>
 
       {/* Tabs */}
